@@ -15,6 +15,7 @@ class Main():
 
         referenceString = input("Please enter the reference String separated by a comma.\n"
                                 "For example: 1,2,3,4...,n\n")
+        print("\n")
 
         if(choose == '1'):# FIFO algorithm
             algorithm = fifo.Fifo(referenceString)

@@ -21,7 +21,7 @@ class Fifo:
                     break
 
         firstInputIndex = min(inputsOrder)  # Filter the min index
-        firstInput = self.__processesQueue[int(firstInputIndex)];  # Asing the value of the first input
+        firstInput = self.__processesQueue[int(firstInputIndex)];  # Assign the value of the first input
         self.__processesQueue[int(firstInputIndex)] = ""  # Remove the input because now, is an output
 
         return firstInput
@@ -34,33 +34,31 @@ class Fifo:
                 if (self.__memorySpaces[0] == ""):
                     self.__memorySpaces[0] = self.__processesQueue[i]
                     self.__pageFaults += 1
+                    print("Time [", i, "]:", self.__memorySpaces)
                 elif (self.__memorySpaces[1] == ""):
                     self.__memorySpaces[1] = self.__processesQueue[i]
                     self.__pageFaults += 1
+                    print("Time [", i, "]:", self.__memorySpaces)
                 elif (self.__memorySpaces[2] == ""):
                     self.__memorySpaces[2] = self.__processesQueue[i]
                     self.__pageFaults += 1
+                    print("Time [", i, "]:", self.__memorySpaces)
                 elif (self.__memorySpaces[3] == ""):
                     self.__memorySpaces[3] = self.__processesQueue[i]
                     self.__pageFaults += 1
+                    print("Time [", i, "]:", self.__memorySpaces)
                 else:
                     # The memory spaces are full, find first input process
                     # to replace it with a new one
                     firstInput = self.findFirstInput()
 
                     # Finally, allocate the new process in the free memory space
-                    if (self.__memorySpaces[0] == firstInput):
-                        self.__memorySpaces[0] = self.__processesQueue[i]
-                        self.__pageFaults += 1
-                    elif (self.__memorySpaces[1] == firstInput):
-                        self.__memorySpaces[1] = self.__processesQueue[i]
-                        self.__pageFaults += 1
-                    elif (self.__memorySpaces[2] == firstInput):
-                        self.__memorySpaces[2] = self.__processesQueue[i]
-                        self.__pageFaults += 1
-                    elif (self.__memorySpaces[3] == firstInput):
-                        self.__memorySpaces[3] = self.__processesQueue[i]
-                        self.__pageFaults += 1
-
-        print(self.__memorySpaces)
-        print("Pages Faults: ", self.__pageFaults)
+                    for j in range(len(self.__memorySpaces)):
+                        if (self.__memorySpaces[j] == firstInput):
+                            self.__memorySpaces[j] = self.__processesQueue[i]
+                            self.__pageFaults += 1
+                            print("Time [", i, "]:", self.__memorySpaces)
+                            break
+            else:
+                print("Time [", i, "]", self.__memorySpaces)
+        print("Pages Faults: ", self.__pageFaults, "\n")
