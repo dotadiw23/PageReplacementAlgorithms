@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/PageReplacementAlgorithms.iml" filepath="$PROJECT_DIR$/.idea/PageReplacementAlgorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pythonPOO/.idea/pythonPOO.iml" filepath="$PROJECT_DIR$/../pythonPOO/.idea/pythonPOO.iml" />
     </modules>
   </component>
 </project>
