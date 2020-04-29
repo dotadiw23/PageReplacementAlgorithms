@@ -1,10 +1,10 @@
 # PageReplacementAlgorithms
 Simulator of page replacementes algorithms
 
-- Optimal Page Replacement (OPT)
+- Optimal Page Replacement [OPT]
 - Not Recently Used
-- First Input First Output (FIFO)
+- First Input First Output [FIFO]
 - Second Chance
-- Clock
-- Least Recently Used (LRU)
-- WSClock
+- Clock (Not Yet)
+- Least Recently Used [LRU] (Not Yet)
+- WSClock (Not Yet)

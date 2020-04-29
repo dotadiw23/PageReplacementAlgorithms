@@ -56,19 +56,23 @@ class Opt:
                 if (self.__memorySpaces[0] == ""):
                     self.__memorySpaces[0] = self.__processesQueue[i]
                     self.__pageFaults += 1
+                    print("Time [", i, "]:", self.__memorySpaces)
                 elif (self.__memorySpaces[1] == ""):
                     self.__memorySpaces[1] = self.__processesQueue[i]
                     self.__pageFaults += 1
+                    print("Time [", i, "]:", self.__memorySpaces)
                 elif (self.__memorySpaces[2] == ""):
                     self.__memorySpaces[2] = self.__processesQueue[i]
                     self.__pageFaults += 1
+                    print("Time [", i, "]:", self.__memorySpaces)
                 else:
                     candidate = self.searchCandidate(i)
                     for j in range(len(self.__memorySpaces)):
                         if (self.__memorySpaces[j] == candidate):
                             self.__memorySpaces[j] = self.__processesQueue[i]
                             self.__pageFaults += 1
+                            print("Time [", i, "]:", self.__memorySpaces)
                             break;
 
         print(self.__memorySpaces)
-        print("Pages faults: ", self.__pageFaults, "\n\n")
+        print("Pages faults: ", self.__pageFaults, "\n")

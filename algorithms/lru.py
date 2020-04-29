@@ -7,7 +7,7 @@ and outputs the number of page faults.
 class Lru():
 
     def __init__(self, referenceString):
-        self.__processesQueue = referenceString.split(",") # For this exercise we have 4 memory spaces
+        self.__processesQueue = referenceString.split(",") # input = 1,2,3,3,5,1,2,2,6,2,1,5,7,6,3
         self.__memorySpaces = ["", "", "", ""]  # For this exercise we have 4 memory spaces
         self.__pageFaults = 0
 
@@ -32,15 +32,19 @@ class Lru():
                 if (self.__memorySpaces[0] == ""):
                     self.__memorySpaces[0] = self.__processesQueue[i]
                     self.__pageFaults += 1
+                    print("Time [", i, "]:", self.__memorySpaces)
                 elif (self.__memorySpaces[1] == ""):
                     self.__memorySpaces[1] = self.__processesQueue[i]
                     self.__pageFaults += 1
+                    print("Time [", i, "]:", self.__memorySpaces)
                 elif (self.__memorySpaces[2] == ""):
                     self.__memorySpaces[2] = self.__processesQueue[i]
                     self.__pageFaults += 1
+                    print("Time [", i, "]:", self.__memorySpaces)
                 elif (self.__memorySpaces[3] == ""):
                     self.__memorySpaces[3] = self.__processesQueue[i]
                     self.__pageFaults += 1
+                    print("Time [", i, "]:", self.__memorySpaces)
                 else:
                     # When the memory spaces are full, search the least
                     # recently used process
@@ -49,7 +53,8 @@ class Lru():
                         if (self.__memorySpaces[j] == lru):
                             self.__memorySpaces[j] = self.__processesQueue[i]
                             self.__pageFaults += 1
+                            print("Time [", i, "]:", self.__memorySpaces)
                             break
-        print(self.__memorySpaces)
-        print("Page faults: ", self.__pageFaults, "\n\n")
+
+        print("Page faults: ", self.__pageFaults, "\n")
 

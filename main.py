@@ -11,7 +11,7 @@ class Main():
     do = True
     while(do):
 
-        choose = input("Please choose an option:\n1. FIFO\n2.LRU\n3.OPT\n4.SCA\n5.NRU\n6.Clock\n7.WSClock\n")
+        choose = input("Please choose an option:\n1. FIFO\n2.LRU\n3.OPT\n4.SCA\n5.NRU (Not Yet)\n6.Clock (Not Yet)\n7.WSClock (Not Yet)\n")
 
         referenceString = input("Please enter the reference String separated by a comma.\n"
                                 "For example: 1,2,3,4...,n\n")
