@@ -32,7 +32,6 @@ class Opt:
         match = True
 
         for i in range(len(self.__memorySpaces)):
-            match = True
             for j in range(index, len(self.__processesQueue)):
                 if not (self.__memorySpaces[i] == self.__processesQueue[j]):
                     if (j == len(self.__processesQueue) - 1 and match == True):

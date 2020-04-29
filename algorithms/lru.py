@@ -24,12 +24,7 @@ class Lru():
         lruIndex = min(indexes)  # Find the index of the least recently used process
         return self.__processesQueue[lruIndex]
 
-    """referenceString = input("Please enter the reference String separated by a comma.\n"
-                            "For example: 1,2,3,4...,n\n")
-    processesQueue = referenceString.split(",") #input = 1,2,3,3,5,1,2,2,6,2,1,5,7,6,3
-                                                #input = 7,0,1,2,0,3,0,4,2,3,0,2,3
-    memorySpaces = ["","","",""] #For this exercise we have 4 memory spaces
-    pageFaults = 0"""
+
     def start(self):
         for i in range(len(self.__processesQueue)):
             if not (self.__processesQueue[i] in self.__memorySpaces):
