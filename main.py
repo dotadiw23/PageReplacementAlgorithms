@@ -1,7 +1,7 @@
 """
 
 """
-from algorithms import fifo, lru, opt
+from algorithms import fifo, lru, opt, sca
 
 class Main():
     print("----------------------------")
@@ -27,7 +27,8 @@ class Main():
             algorithm = opt.Opt(referenceString)
             algorithm.start()
         elif(choose == '4'): # SCA algorithm
-            0
+            algorithm = sca.Sca(referenceString)
+            algorithm.start()
         elif(choose == '5'): # NRU algorithm
             0
         elif(choose == '6'): # Clock algorithm
